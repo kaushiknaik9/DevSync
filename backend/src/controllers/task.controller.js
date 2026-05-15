@@ -1,31 +1,36 @@
-const gettasks = (req, res) => {
+const Tasks = require("../models/task.model");
+
+const gettasks = async (req, res) => {
+  const tasks = await Tasks.find();
   res.status(200).json({
     success: true,
-    message: "Tasks are here",
+    message: tasks,
   });
 };
 
-const createtasks = (req, res) => {
-  console.log(req.body);
+const createtasks = async (req, res) => {
+  const task = await Tasks.create(req.body);
   res.status(201).json({
     success: true,
-    message: `Following Task is being Created: ${req.body.message}`,
+    message: task,
   });
 };
 
-const updatetasks = (req, res) => {
-  task_id = req.params.id;
+const updatetasks = async (req, res) => {
+  const task = await Tasks.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+  });
   res.status(201).json({
     success: true,
-    message: `Task to update is with id: ${task_id}`,
+    message: task,
   });
 };
 
-const deletetask = (req, res) => {
-  task_id = req.params.id;
-  res.status(201).json({
+const deletetask = async (req, res) => {
+  const task = await Tasks.findByIdAndDelete(req.params.id);
+  res.status(204).json({
     success: true,
-    message: `Task to delete is with id: ${task_id}`,
+    message: task,
   });
 };
 
