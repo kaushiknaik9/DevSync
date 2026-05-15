@@ -40,7 +40,6 @@ Users can:
 - Manage permissions
 
 Examples:
-
 - Startup teams
 - College project groups
 - Freelance agencies
@@ -101,7 +100,6 @@ Users can upload:
 - Project assets
 
 Future integrations:
-
 - Cloudinary
 - AWS S3
 
@@ -118,7 +116,6 @@ Roles include:
 - Viewer
 
 Permissions will control:
-
 - Task editing
 - Member management
 - Project deletion
@@ -149,7 +146,6 @@ Users receive notifications for:
 - Deadlines
 
 Future support:
-
 - Email notifications
 - Push notifications
 
@@ -159,42 +155,42 @@ Future support:
 
 ## Backend Core
 
-| Technology | Purpose             |
-| ---------- | ------------------- |
-| Node.js    | Runtime environment |
-| Express.js | Backend framework   |
-| MongoDB    | Database            |
-| Mongoose   | ODM for MongoDB     |
+| Technology | Purpose |
+|------------|----------|
+| Node.js | Runtime environment |
+| Express.js | Backend framework |
+| MongoDB | Database |
+| Mongoose | ODM for MongoDB |
 
 ---
 
 ## Development Tools
 
-| Tool    | Purpose                  |
-| ------- | ------------------------ |
-| Git     | Version control          |
-| GitHub  | Repository hosting       |
-| Postman | API testing              |
-| VS Code | Development environment  |
-| npm     | Package management       |
-| dotenv  | Environment variables    |
+| Tool | Purpose |
+|------|----------|
+| Git | Version control |
+| GitHub | Repository hosting |
+| Postman | API testing |
+| VS Code | Development environment |
+| npm | Package management |
+| dotenv | Environment variables |
 | Nodemon | Development auto-restart |
 
 ---
 
 ## Planned Advanced Features
 
-| Technology    | Purpose                 |
-| ------------- | ----------------------- |
-| JWT           | Authentication          |
-| bcrypt        | Password hashing        |
-| Socket.io     | Real-time communication |
-| Redis         | Caching & sessions      |
-| Docker        | Containerization        |
-| Cloudinary    | File storage            |
-| Winston       | Logging                 |
-| Rate Limiting | API security            |
-| Deployment    | Production hosting      |
+| Technology | Purpose |
+|------------|----------|
+| JWT | Authentication |
+| bcrypt | Password hashing |
+| Socket.io | Real-time communication |
+| Redis | Caching & sessions |
+| Docker | Containerization |
+| Cloudinary | File storage |
+| Winston | Logging |
+| Rate Limiting | API security |
+| Deployment | Production hosting |
 
 ---
 
@@ -220,4 +216,3 @@ devsync-backend/
 ├── package.json
 ├── server.js
 └── README.md
-```
