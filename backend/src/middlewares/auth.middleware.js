@@ -14,8 +14,12 @@ const protect = (req, res, next) => {
     const token = authHeader.split(" ")[1];
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    console.log(decoded);
 
-    req.body = decoded;
+    req.user = decoded;
+    console.log("REQ USER:", req.user);
+    console.log("REQ USER:", typeof req.user);
+    console.log(req.headers.authorization);
 
     next();
   } catch (e) {

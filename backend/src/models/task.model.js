@@ -1,4 +1,3 @@
-const { Timestamp } = require("mongodb");
 const mongoose = require("mongoose");
 
 const taskschema = new mongoose.Schema(
@@ -14,6 +13,11 @@ const taskschema = new mongoose.Schema(
     completed: {
       type: Boolean,
       default: false,
+    },
+    createdBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
     },
   },
   {

@@ -1,7 +1,7 @@
 const Tasks = require("../models/task.model");
 
 const gettasks = async (req, res) => {
-  const tasks = await Tasks.find();
+  const tasks = await Tasks.find().populate("createdBy", "name email");
   res.status(200).json({
     success: true,
     message: tasks,
@@ -9,7 +9,10 @@ const gettasks = async (req, res) => {
 };
 
 const createtasks = async (req, res) => {
-  const task = await Tasks.create(req.body);
+  console.log(req.user);
+  console.log("CONTROLLER USER:", req.user);
+  console.log("CONTROLLER USER:", typeof req.user);
+  const task = await Tasks.create({ ...req.body, createdBy: req.user.id });
   res.status(201).json({
     success: true,
     message: task,

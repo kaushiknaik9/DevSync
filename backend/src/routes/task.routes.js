@@ -6,6 +6,7 @@ const {
   updatetasks,
   deletetask,
 } = require("../controllers/task.controller");
+
 const protect = require("../middlewares/auth.middleware");
 const authorized = require("../middlewares/role.middleware");
 
